@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">新闻客户端</string>
+    <string name="editTextHint">输入城市中文或拼音</string>
+    <string name="tips">抱歉，暂时没有找到相关城市～～</string>
+
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/shareToQQWeibo"
+        android:icon="@mipmap/icon_qq_weibo_logo"
+        android:title="分享到腾讯微博"
+        app:showAsAction="never"/>
+
+
+    <item android:id="@+id/shareToWeixin"
+        android:title="分享到朋友圈"
+        android:icon="@mipmap/icon_weixinlogo"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/shareToQQZone"
+        android:icon="@mipmap/icon_qzone_logo"
+        android:title="分享到QQ空间"
+        app:showAsAction="never"/>
+
+
+    <item android:id="@+id/shareToWeibo"
+        android:title="分享到新浪微博"
+        android:icon="@mipmap/icon_sina_weibo_logo"
+        app:showAsAction="never"/>
+
+</menu>

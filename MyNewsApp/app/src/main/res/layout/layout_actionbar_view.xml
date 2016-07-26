@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvSelectCity"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="深圳"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:drawableRight="@mipmap/city_select"
+        android:drawablePadding="8dp"
+        />
+
+</LinearLayout>

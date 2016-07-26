@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivPicture"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:src="@mipmap/icon"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_green_light"
+                android:text="东方战场"
+                />
+
+            <TextView
+                android:id="@+id/tvYear"
+                style="@style/TextStyle"
+                android:text="年份：2016"
+                />
+            <TextView
+                android:id="@+id/tvActor"
+                style="@style/TextStyle"
+                android:text="演员：黄海冰；罗嘉良；马晓伟；袁咏仪；"
+                android:lines="1"
+                android:ellipsize="end"
+                />
+            <TextView
+                android:id="@+id/tvTag"
+                style="@style/TextStyle"
+                android:text="类型：抗日"
+                />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                style="@style/TextStyle"
+                android:text="简介：1931年9月18日，中国“9·18”事变爆发，中共地下党员李天白和苏娅急忙逃离，紧急向中共中央报告，而此时张学良正在北平观看梅兰芳的演出。9.18事变震惊了世界，斯大林、希特勒都将目光集中到远东，而蒋介石却照样亲赴江西督剿红军。攘外必先安内，国内尚未平定，如何对外？中国共产党在民族危亡关头，连续发表针对9.18事变的宣言，赢得社会关注，并立即派周保中、赵一曼等人赶赴东北组织抗日。日本国内军部与政府发生激烈冲突，裕仁天皇站到了军部一边。关东军决定在东北扶植傀儡政权，派土肥原贤二速往天津策动溥仪。溥仪满怀着惊惧与梦想投靠了日本人。1932年3月9日，溥仪在婉容“你不是个男人”的咒骂声中出席了满洲国的开国大典。"
+                android:lines="5"
+                android:ellipsize="end"
+                android:textSize="8sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/viewgroup"
+                ></LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lvRelativeRes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

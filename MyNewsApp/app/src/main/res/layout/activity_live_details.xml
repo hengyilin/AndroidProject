@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.hylin.edu.szu.mynewsapp.activity.LiveDetailsActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="标题"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:text="功能:"
+                android:textSize="20sp"
+                style="@style/TextViewStyle"
+                android:layout_marginBottom="0dp"
+                />
+            <TextView
+                android:id="@+id/tvTags"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="简介:"
+                android:textSize="20sp"
+                android:layout_marginBottom="0dp"/>
+            <TextView
+                android:id="@+id/tvImtro"
+                style="@style/TextViewStyle"
+                />
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="制作原料:"
+                android:textSize="20sp"
+                android:layout_marginBottom="0dp"
+                />
+            <TextView
+                android:id="@+id/tvIngredients"
+                style="@style/TextViewStyle"
+                />
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="制作配料:"
+                android:textSize="20sp"
+                android:layout_marginBottom="0dp"
+                />
+            <TextView
+                android:id="@+id/tvBurden"
+                style="@style/TextViewStyle"
+                />
+
+            <TextView
+                android:id="@+id/tvSteps"
+                style="@style/TextViewStyle"
+                android:textSize="20sp"
+                android:text="制作步骤:"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

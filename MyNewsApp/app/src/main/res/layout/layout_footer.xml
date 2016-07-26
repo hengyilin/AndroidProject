@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rgItemSelector"
+        >
+
+        <RadioButton
+            android:id="@+id/rbNews"
+            android:checked="true"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/news_selector"
+            android:text="新闻"
+            />
+        <RadioButton
+            android:id="@+id/rbVideo"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/video_selector"
+            android:text="视频"
+            />
+        <RadioButton
+            android:id="@+id/rbRead"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/read_selector"
+            android:text="阅读"
+            />
+        <RadioButton
+            android:id="@+id/rbLive"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/live_selector"
+            android:text="生活"
+            />
+
+    </RadioGroup>
+
+
+</LinearLayout>

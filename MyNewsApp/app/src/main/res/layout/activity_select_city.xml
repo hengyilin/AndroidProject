@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+    <include layout="@layout/layout_select_city_input"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        >
+        <!--默认显示的列表（列出所有的字段）-->
+        <ListView
+            android:id="@+id/lvAllCity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            />
+
+        <!--显示匹配的结果界面默认隐藏，当用户在输入框输入相应字母后即显示-->
+        <ListView
+            android:id="@+id/lvResultCity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:visibility="gone"
+            />
+
+        <!--位于右侧的字母栏-->
+        <cn.hylin.edu.szu.mynewsapp.view.SideLetterBar
+            android:id="@+id/slideLetterbar"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="3dp"
+            />
+
+        <!--点击了侧边字母栏后弹出一个类似于土司的对话框显示当前选择的是什么字母，松开后即消失-->
+        <TextView
+            android:id="@+id/tvOverLay"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/overlay_textview_bg"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:text="测试"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            />
+
+        <!--没有找到时显示的提示信息-->
+        <TextView
+            android:id="@+id/tvFailTips"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/gray1"
+            android:textSize="18sp"
+            android:text="@string/tips"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

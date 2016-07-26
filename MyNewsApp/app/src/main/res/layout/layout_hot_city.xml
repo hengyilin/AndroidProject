@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    tools:ignore="RtlHardcoded">
+
+    <TextView
+        android:id="@+id/tvHotCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/background"
+        android:clickable="true"
+        android:padding="10dp"
+        android:text="热门城市"
+        android:textColor="@color/gray1"
+        android:textSize="16sp" />
+
+    <cn.hylin.edu.szu.mynewsapp.view.WrapHeightGridView
+        android:id="@+id/gvHotCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:horizontalSpacing="12dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:paddingLeft="16dp"
+        android:paddingRight="36dp"
+        android:scrollbars="none"
+        android:verticalSpacing="12dp" />
+
+</LinearLayout>
