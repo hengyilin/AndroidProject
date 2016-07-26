@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="12dp"
+    android:layout_height="70dp">
+
+    <ImageView
+        android:id="@+id/ivClassViewSDCardIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/home_memory_sdcard" />
+
+    <TextView
+        android:id="@+id/tvSDCardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pbSDCardCap"
+        android:layout_alignStart="@+id/pbSDCardCap"
+        android:layout_alignTop="@+id/ivClassViewSDCardIcon"
+        android:layout_marginTop="5dp"
+        android:text="sd卡名字"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvSDCardCap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/pbSDCardCap"
+        android:layout_alignRight="@+id/pbSDCardCap"
+        android:layout_alignTop="@+id/ivClassViewSDCardIcon"
+        android:layout_marginTop="5dp"
+        android:text="6.29GB/9.37GB"
+        android:textColor="@color/gray"
+        android:textSize="10sp" />
+
+
+    <ProgressBar
+        android:id="@+id/pbSDCardCap"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/ivClassViewSDCardIcon" />
+
+</RelativeLayout>
