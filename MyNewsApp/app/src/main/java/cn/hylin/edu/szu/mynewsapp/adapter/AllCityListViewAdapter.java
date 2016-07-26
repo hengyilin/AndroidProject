@@ -2,7 +2,6 @@ package cn.hylin.edu.szu.mynewsapp.adapter;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -204,7 +203,7 @@ public class AllCityListViewAdapter extends BaseAdapter {
                 });
                 break;
             case 2://全部
-                Log.i(Constants.DEBUG_TAG, "position = " + position);
+                //Log.i(Constants.DEBUG_TAG, "position = " + position);
                 if (convertView == null) {
                     convertView = inflater.inflate(R.layout.city_listview_item, parent, false);
                     mViewHolder = new ViewHolder();
@@ -216,11 +215,11 @@ public class AllCityListViewAdapter extends BaseAdapter {
                 }
                 final String city = cities.get(position).getName();
                 mViewHolder.tvCityName.setText(city);
-                Log.i(Constants.DEBUG_TAG,"======================"+cities.get(position).getPingyin());
+               // Log.i(Constants.DEBUG_TAG,"======================"+cities.get(position).getPingyin());
                 String currentLetter = PinYiUtils.getFirstLetter(cities.get(position).getPingyin());
-                Log.i(Constants.DEBUG_TAG, "currentLetter = " + currentLetter);
+                //Log.i(Constants.DEBUG_TAG, "currentLetter = " + currentLetter);
                 String previousLetter = PinYiUtils.getFirstLetter(cities.get(position - 1).getPingyin());
-                Log.i(Constants.DEBUG_TAG, "previousLetter = " + previousLetter);
+                //Log.i(Constants.DEBUG_TAG, "previousLetter = " + previousLetter);
                 if (!TextUtils.equals(currentLetter, previousLetter)) {
                     mViewHolder.tvCityPinYi.setVisibility(View.VISIBLE);
                     mViewHolder.tvCityPinYi.setText(currentLetter);

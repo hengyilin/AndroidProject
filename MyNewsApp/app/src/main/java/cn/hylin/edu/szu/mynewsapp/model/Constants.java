@@ -8,6 +8,8 @@ package cn.hylin.edu.szu.mynewsapp.model;
  * Description : 定义常量
  */
 public class Constants  {
+    public static String cityName = "深圳";
+
     public static final String DEBUG_TAG = "debug_tag";
 
     public static final String BASE_URL = "http://v.juhe.cn/";

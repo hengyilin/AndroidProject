@@ -8,12 +8,12 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -76,6 +76,7 @@ public class VideoFragment extends ItemBaseFragment {
      */
     private void initView() {
         tvSelectCity = (TextView) layoutView.findViewById(R.id.tvSelectCity);
+        tvSelectCity.setText(Constants.cityName);
         tabLayoutClass = (TabLayout) layoutView.findViewById(R.id.tabLayoutClass);
         ibSearch = (ImageButton) layoutView.findViewById(R.id.ibSearch);
         vpVideoContent = (ViewPager) layoutView.findViewById(R.id.vpVideoContent);
@@ -120,6 +121,7 @@ public class VideoFragment extends ItemBaseFragment {
         });
     }
 
+
     /**
      * 懒加载 加载数据
      */
@@ -145,13 +147,15 @@ public class VideoFragment extends ItemBaseFragment {
             public void onResponse(Call<VideoRecentInfoResponse> call, Response<VideoRecentInfoResponse> response) {
                 if (response.isSuccessful()) {
                     VideoRecentInfoResponse body = response.body();
-                    Toast.makeText(getActivity(),"返回值为：" + body.getReason(),Toast.LENGTH_LONG).show();
+                    Log.i(Constants.DEBUG_TAG,"返回值为：" + body.getReason());
+//                    Toast.makeText(getActivity(),"返回值为：" + body.getReason(),Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<VideoRecentInfoResponse> call, Throwable t) {
-                Toast.makeText(getActivity(),"获取数据失败",Toast.LENGTH_SHORT).show();
+                Log.i(Constants.DEBUG_TAG,"获取数据失败");
+//                Toast.makeText(getActivity(),"获取数据失败",Toast.LENGTH_SHORT).show();
             }
         });
 

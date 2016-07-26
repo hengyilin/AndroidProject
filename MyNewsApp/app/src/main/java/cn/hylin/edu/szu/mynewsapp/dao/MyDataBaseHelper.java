@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
-import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -17,7 +16,6 @@ import java.util.Comparator;
 import java.util.List;
 
 import cn.hylin.edu.szu.mynewsapp.model.City;
-import cn.hylin.edu.szu.mynewsapp.model.Constants;
 
 /**
  * Author：林恒宜 on 16-7-17 14:06
@@ -41,7 +39,6 @@ public class MyDataBaseHelper {
         PATH  = File.separator + "data" + Environment.getDataDirectory()
                 .getAbsolutePath() + File.separator + context.getPackageName()
                 + File.separator + "databases" + File.separator;
-        Log.i(Constants.DEBUG_TAG,PATH);
     }
 
     /**
@@ -104,8 +101,6 @@ public class MyDataBaseHelper {
 
         Cursor cursor = db.rawQuery("select * from " + TABLE_NAME +" where name like \"%" + selection
                 + "%\" or pinyin like \"%" + selection + "%\"" ,null);
-//        Cursor cursor = db.rawQuery("select * from " + TABLE_NAME + "where name like \"%"
-//                + selection + "\"%" + "or pinyin like \"%" + selection + "\"%" ,null);
         List<City> cities = new ArrayList<>();
         while (cursor.moveToNext()) {
             String name = cursor.getString(cursor.getColumnIndex("name"));
