@@ -10,7 +10,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.format.Formatter;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,7 +93,7 @@ public class ClassViewFragment extends Fragment {
         gvClassItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(),"点击了第" + position + "项" ,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(),"点击了第" + position + "项" ,Toast.LENGTH_SHORT).show();
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction tx = fm.beginTransaction();
                 GridViewListItemDetailFragment fragment = new GridViewListItemDetailFragment();
